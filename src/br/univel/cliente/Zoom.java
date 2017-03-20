@@ -3,11 +3,10 @@ package br.univel.cliente;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.UnicastRemoteObject;
 import br.univel.comum.CONSTANTES;
 import br.univel.comum.Plact;
 
-public class Zoom extends Thread implements Runnable, Plact{
+public class Zoom extends Thread implements Plact{
 
 	private Integer vlr = null;
 	
@@ -42,7 +41,7 @@ public class Zoom extends Thread implements Runnable, Plact{
 		}
 	}
 	
-	public void run(){
+/*	public void run(){
 		Zoom servico;
 		try{
 			servico = (Zoom) UnicastRemoteObject.exportObject(Zoom.this, 0);
@@ -50,5 +49,5 @@ public class Zoom extends Thread implements Runnable, Plact{
 			registry.rebind(Plact.NOME, servico);
 		} catch(Exception e){}
 	}
-	
+	*/
 }
